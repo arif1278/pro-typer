@@ -60,9 +60,10 @@ body {
   display: none;
 }
 
+/* bugfix-6 result position */
 #result {
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
@@ -70,16 +71,15 @@ body {
   background-color: #171717;
   border-radius: 15px;
   border: 2px solid #9dffad;
-  color: rgb(255, 247, 247);
+  color: white;
   text-align: center;
   padding: 2rem;
-
 }
 
 #show-time {
   text-align: center;
-  color: rgb(253, 245, 245);
-  margin: 10px auto;
+  color: white;
+  margin: 10px 0;
 }
 
 .green {
@@ -98,8 +98,9 @@ body {
   border: 2px solid white !important;
 }
 
-.hidden {
+.hiddens {
   display: none;
+
 }
 
 .title {
@@ -192,5 +193,53 @@ button {
 
   .card {
     flex-direction: column;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }
