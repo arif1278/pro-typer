@@ -60,7 +60,7 @@ body {
   display: none;
 }
 
-/* bugfix-6 result position */
+
 #result {
   position: fixed;
   top: 40%;
@@ -98,9 +98,8 @@ body {
   border: 2px solid white !important;
 }
 
-.hiddens {
+.hidden {
   display: none;
-
 }
 
 .title {
