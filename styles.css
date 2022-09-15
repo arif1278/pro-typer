@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-position: left top;
   font-family: "Zilla Slab", serif;
+
 }
 
 .box-container {
@@ -183,6 +184,15 @@ button {
   width: 100%;
   position: fixed;
   top: 0;
+}
+
+.blogs {
+  color: #d7eb65;
+  font-size: 20px;
+  margin: 30px auto;
+  padding: 10px;
+  margin-left: 300px;
+
 }
 
 @media only screen and (max-width: 700px) {

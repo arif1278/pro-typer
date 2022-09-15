@@ -14,7 +14,7 @@
 
 <body>
     <!-- navbar-section -->
-    <header class="nav-section">
+    <header class="nav-section bg-dark">
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,55 +23,115 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand text-black fw-bold fs-2" href="#">Blogs</a>
+                    <a class="navbar-brand text-white fw-bold fs-2" href="#">Blogs</a>
+                    <a target="_blank" class="navbar-brand text-white fw-bold fs-2" href="index.html">Home</a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn bg-dark btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- main sectioin -->
     <main class="mt-5">
         <section class="container">
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
-                    <div class="card text-light" style="background-color: rgb(17, 18, 17);">
+                    <div class="card text-light" style="background-color: rgb(18, 17, 18);">
                         <div class="card-body">
-                            <h5 class="card-title text-center">The Difference between Local Storage and Session Storage
-                            </h5>
+                            <h5 class="card-title text-center">The Difference between Local Storage and Session
+                                Storage</h5>
                             <p class="card-text">
                             <ol>
-
-                                <li>localStorage persists the storage across browser sessions. So even if the domain is
-                                    opened in a new tab, or the browser is closed and reopened, the storage is saved.
-                                    There is no expiration.
-                                    sessionStorage is cleared when the page session ends. A page session lasts as long
-                                    as the tab or the browser is open. Therefore, when you open a new tab or a new
-                                    window, this creates a new session and new storage.
+                                <li>Their main difference is that local storage data does not expire, whereas
+                                    session storage data gets cleared when the user closes its browser window
                                 </li>
-                                <li>Their main difference is that local storage data does not expire, whereas session
-                                    storage data gets cleared when the user closes its browser window</li>
-                                <li>localstorage transition data storing multiple windows and it least beyond current
-                                    session and session storage data storing certain session time when close window then
-                                    remove all the data.</li>
+                                <li>Page sessions are valid for only one tab at a time. So, if a user has three
+                                    tabs open, each one will have its own page session.Since local storage is
+                                    not session-based, all the data must be deleted via javascript or manually.
+                                </li>
+                                <li>localstorage transition data storing multiple windows and it least beyond
+                                    current session and session storage data storing certain session time when
+                                    close window then remove all the data.</li>
                             </ol>
                             </p>
                         </div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="card text-light" style="background-color: rgb(16, 15, 16);">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">local and global scope in JavaScript</h5>
+                            <p class="card-text">
+                            <ol>
+                                <li>Defining a variable in global scope has a lot of problems. It may cause
+                                    conflicts in your code. If you declare multiple global variables with var
+                                    keyword, the second variable will overwrite the first one. Again, if you
+                                    declare with let or const keyword, it will throw one error that the variable
+                                    is already defined.</li>
+                                <li>
+                                    Variables defined with local scope are not accessible globally. Their access
+                                    is limited. We can’t access any local scoped variable from a different
+                                    function. These variables are also called local variables.
+                                </li>
 
+                                <li>let variableName = "A string"; //global scope
+                                    if (condition) {
+                                    block of code to be executed //local scope
+                                    }</li>
+                            </ol>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-light" style="background-color: rgb(17, 16, 17);">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">When we get undefind in JavaScript ?</h5>
+                            <p class="card-text text-center">
+                            <ol>
+                                <li>The undefined is a primitive type that has a single value undefined.</li>
+                                <li>Accessing an uninitialized variable returns undefined.</li>
+                                <li>Accessing a non-existing property of an object returns undefined.</li>
+                                <li>Accessing a out-of-bounds array element returns undefined.</li>
+                                <li>A function without a return statement or with a return statement but without an
+                                    expression returns undefined.</li>
 
-
+                            </ol>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-light" style="background-color: rgb(14, 14, 14);">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">The event loop</h5>
+                            <p class="card-text">
+                            <ol>
+                                <li>JavaScript has a runtime model based on an event loop, which is
+                                    responsible for executing the code, collecting and processing events, and
+                                    executing queued sub-tasks. This model is quite different from models in other
+                                    languages like C and Java.</li>
+                                <li>The loop gives priority to the call stack, and it first processes everything it
+                                    finds in the call stack, and once there's nothing in there, it goes to pick up
+                                    things in the message queue.</li>
+                            </ol>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
 
 </html>
