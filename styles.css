@@ -131,10 +131,14 @@ body {
 }
 
 .buttons {
+
   display: flex;
   justify-content: center;
   margin: 30px 0;
+
+
 }
+
 
 button {
   padding: 10px 20px;
@@ -186,19 +190,24 @@ button {
   top: 0;
 }
 
-.blogs {
-  color: #d7eb65;
-  font-size: 20px;
-  margin: 30px auto;
-  padding: 10px;
-  margin-left: 300px;
 
+.blogs {
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 30px 0;
+  margin-left: 300px;
 }
+
+
 
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
+  }
+
+  .blogs {
+    margin: 30px 65px;
   }
 
   .card {
