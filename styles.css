@@ -106,7 +106,7 @@ body {
 
 .title {
   text-align: center;
-  color: white;
+  color: rgb(241, 72, 6);
   margin: 20px 0;
 }
 
@@ -126,7 +126,7 @@ body {
 }
 
 .title2 {
-  color: white;
+  color: rgb(228, 85, 14);
   display: block;
 }
 
