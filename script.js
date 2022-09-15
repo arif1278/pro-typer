@@ -1,6 +1,8 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
 
+// find debug 3
+
 const startBtn = document.getElementById("starts");
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
@@ -70,24 +72,29 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
 
+  // find debug 4
+
   const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
-  resultModal.classList.toggle("hiddens");
-  modalBackground.classList.toggle("hiddens");
+  resultModal.classList.toggle("hidden");
+  modalBackground.classList.toggle("hidden");
   // clear user text
   display.innerHTML = "";
   // make it inactive
   display.classList.add("inactive");
   // show result
 
+  // find debug error 5
+
   resultModal.innerHTML += `
-    <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <button onclick="closeModal()">Close</button>
-  `;
+  <h1>Finished!</h1>
+  <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+  <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+  <button onclick="closeModal()">Close</button>
+`;
+
 
   addHistory(questionText, timeTaken, errorCount);
 
@@ -99,8 +106,9 @@ const gameOver = () => {
 };
 
 const closeModal = () => {
-  modalBackground.classList.toggle("hiddens");
-  resultModal.classList.toggle("hiddens");
+  modalBackground.classList.toggle("hidden");
+  resultModal.classList.toggle("hidden");
+
 };
 
 const start = () => {
@@ -110,6 +118,8 @@ const start = () => {
   let count = 3;
   countdownOverlay.style.display = "flex";
 
+  // find debug 1
+
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
@@ -117,6 +127,8 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
+
+      // find debug 2
 
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
