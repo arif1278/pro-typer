@@ -1,1 +1,1 @@
-    Live Project URL  https://musical-starship-ccbfa9.netlify.app/
+    Live Project url  https://musical-starship-ccbfa9.netlify.app/
